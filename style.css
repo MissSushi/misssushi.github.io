@@ -1,0 +1,241 @@
+@font-face { font-family: 'Kalam';
+    src: url(fonts/Kalam-Regular.ttf) format('truetype'); }
+
+:root {
+    --akzent: #2d2215;
+    --abstand: 4rem;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+aside {
+    padding: 2.5rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.text{
+    max-width: 70ch;
+}
+.center {
+    margin: 0 auto;
+    margin: 2rem;
+}
+
+.profile {
+    display: block;
+    border-radius: 50%;
+    height:7rem; 
+    width:7rem;
+    margin-right: 1rem;
+}
+
+svg {
+    height: 1rem;
+}
+
+.menu-list {
+    padding: 0;
+    
+    border-top: 1px solid #d8d8d8;
+    padding-top: 2rem;
+}
+
+.menu-list li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+}
+.menu-icon{
+    display: inline-block;
+    background-color: var(--akzent);
+    border-radius: 50%;
+    padding: 0.25rem;
+    color: white;
+}
+
+.menu-icon svg {
+    display: block;
+}
+.menu-head{
+    display: flex;
+    flex-direction: column;
+    padding-right: 15rem;
+    margin-right: 15rem;
+
+    border-right: 1px solid #d8d8d8;
+
+    position: sticky;
+    top: 13rem;
+
+
+}
+
+.menu-head div * {
+    margin: 0;
+}
+.menu-item{
+    display:flex;
+    align-items: center;
+}
+.menu-item .menu-icon{
+    margin-right: 0.5rem;
+}
+.menu-ueberschrift h2{
+    font-size: 1.5rem;
+}
+main {
+    margin-top: 3rem;
+    margin-right:0 ;
+    display: flex;
+    flex-direction: column;
+}
+.datum {
+    color: #9FB2CA;
+    padding-left: 1.1rem;
+    padding-top: 0.5rem;
+    padding-bottom:0.1rem;
+    align-items: center;
+}
+.headline{
+    color: var(--akzent);
+}
+.menu-ueberschrift .headline {
+font-size: 2.5rem;
+}
+summary {
+    font-size: 1rem;
+    font-weight:normal;
+    outline: none;
+    margin: 0.3rem 0;
+    cursor: pointer;
+}
+/* summary:hover {
+    background: aqua;
+} */
+
+.navigation{
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+    backdrop-filter: blur(0.5rem);
+
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    background-color: rgba(214, 214, 214, 0.4);
+
+    line-height: 90px;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+
+.logo {
+    text-decoration: none;
+    padding: 0 3rem;
+    border-right: 2px solid black;
+}
+.logo img{
+    width:3rem;
+    display: block;
+}
+
+.menüleiste {
+    font-size: larger;
+    text-align: left;
+    font-family: "Kalam";
+
+    text-transform: capitalize;
+}
+.menüleiste a {
+    color: black;
+    text-decoration:none;
+    outline: none;
+    cursor: pointer;
+    margin: 3rem;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.menüleiste a:hover {
+    border-bottom:solid black 5px;
+}
+body {
+    padding-top: 5.5rem;
+    margin: 0;
+}
+
+.headline, h2{
+    font-family: "Kalam";
+}
+
+.laufbahn-beruf{
+    margin-bottom: var(--abstand);
+}
+
+.laufbahn-schule{
+    margin-bottom: var(--abstand);
+}
+.skills {
+    margin-bottom: var(--abstand);
+}
+.skills details div {
+    padding-left: 1.1rem;
+    padding-top: 0.5rem;
+    color: #9FB2CA;
+
+}
+.sonstiges{
+    margin-bottom: var(--abstand);
+}
+
+.nav-link {
+    scroll-margin-top: 7rem;
+}
+
+/* Solange Fenstergröße Kleiner als 1328px (also 0 bis 1327px) ist, dann gelten alle folgenden Regeln */
+@media (max-width: 1328px) {
+    .menu-head {
+        margin-right: 3rem;
+        padding-right: 3rem;
+    }
+    .menüleiste a {
+        margin: 1.2rem;
+    }
+    .menüleiste a:nth-child(1) {
+        margin-left: 3rem;
+    }
+}
+
+@media (max-width: 1040px) {
+    aside {
+        flex-direction: column;
+    }
+    .menu-head {
+        position: static;
+        border-right: none;
+        padding: 0;
+        margin: 0;
+    }
+    .menu-list li {
+        margin-right: 0.75rem;
+    }
+
+    .menüleiste a:not(.show-on-mobile) {
+        display: none;
+    }
+}

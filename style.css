@@ -112,6 +112,9 @@ main {
 .headline{
     color: var(--akzent);
 }
+.headline summary {
+    background-color: grey;
+}
 .menu-ueberschrift .headline {
 font-size: 2.5rem;
 }

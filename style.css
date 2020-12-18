@@ -103,7 +103,7 @@ main {
     flex-direction: column;
 }
 .datum {
-    color: #9FB2CA;
+    color: #4a545f;
     padding-left: 1.1rem;
     padding-top: 0.5rem;
     padding-bottom:0.1rem;
@@ -112,9 +112,6 @@ main {
 .headline{
     color: var(--akzent);
 }
-.headline summary {
-    background-color: grey;
-}
 .menu-ueberschrift .headline {
 font-size: 2.5rem;
 }
@@ -122,12 +119,17 @@ summary {
     font-size: 1rem;
     font-weight:normal;
     outline: none;
-    margin: 0.3rem 0;
+    margin: 0.5rem 0;
     cursor: pointer;
+    background-color:  rgba(214, 214, 214, 0.4);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px #0000003b;
+    transition: box-shadow ease-out 250ms;
 }
-/* summary:hover {
-    background: aqua;
-} */
+summary:hover {
+    box-shadow: 0 4px 8px #0000003b;
+}
 
 .navigation{
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
@@ -199,7 +201,7 @@ body {
 .skills details div {
     padding-left: 1.1rem;
     padding-top: 0.5rem;
-    color: #9FB2CA;
+    color: #4a545f;
 
 }
 .sonstiges{
